@@ -16,6 +16,10 @@ class AttrDict(dict):
         super(AttrDict, self).__init__(*args, **kwargs)
         self.__dict__ = self
 
+#class AttributeDict(dict): 
+#    __getattr__ = dict.__getitem__
+#   __setattr__ = dict.__setitem__
+
 class Task:
     def __init__(self, model_name, data_name, cv_runs, params_dict, logger):
         print("Loading data...")

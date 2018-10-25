@@ -6,7 +6,10 @@ import logging
 class ConfigDict(dict):
     __getattr__ = dict.__getitem__
 
-
+#class AttributeDict(dict): 
+#    __getattr__ = dict.__getitem__
+#   __setattr__ = dict.__setitem__
+#
 def _make_config_dict(obj):
     if isinstance(obj, dict):
         return ConfigDict({k: _make_config_dict(v) for k, v in obj.items()})
