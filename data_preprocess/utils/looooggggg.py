@@ -13,6 +13,7 @@ logging.basicConfig(level=logging.DEBUG, format='%(levelname)s %(module)s line:%
                     datefmt='%H:%M:%S')
 formatter = logging.Formatter('%(levelname)s %(module)s line:%(lineno)d %(asctime)s %(message)s')
 filehdlr = logging.FileHandler('log-' + datetime.datetime.now().strftime('%Y-%m-%d %H-%M-%S'))
+# datetime.now().strftime('%Y-%m-%d %I:%M:%S.%f %p')
 filehdlr.setLevel(logging.DEBUG)
 filehdlr.setFormatter(formatter)
 logging.getLogger().addHandler(filehdlr)
