@@ -1,4 +1,4 @@
-# Joint_Rule_KGE
+# JointRuleKGE
 
 [//]:
     b
